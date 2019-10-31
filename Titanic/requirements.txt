@@ -1,5 +1,4 @@
-kaggle==1.5.6
-zipfile
-pandas==0.23.0
-pickleshare==0.7.4
-scikit-learn==0.19.1
+kaggle
+pandas
+pickleshare
+scikit-learn
