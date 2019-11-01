@@ -2,6 +2,7 @@
 FROM python:3.6
 
 RUN mkdir -p ~/.kaggle
+ADD . ~/.kaggle
 
 COPY kaggle.json ./.kaggle/kaggle.json
 
