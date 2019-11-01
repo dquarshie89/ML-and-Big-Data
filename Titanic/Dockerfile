@@ -1,17 +1,18 @@
 
 FROM python:3.6
 
-RUN mkdir -p ~/.kaggle
-ADD . ~/.kaggle
+#RUN mkdir -p ~/.kaggle
+#ADD . ~/.kaggle
 
-COPY kaggle.json ./.kaggle/kaggle.json
+#COPY kaggle.json ./.kaggle/kaggle.json
 
-COPY . /
-WORKDIR ./
+COPY . /app
+#WORKDIR ./
 #COPY kaggle.json /.kaggle
 #ADD . /app
 
-RUN pip install -r requirements.txt
+RUN make /app
+#pip install -r requirements.txt
 
 EXPOSE 80
 CMD [ "python", "titanic_predictions.py" ]
