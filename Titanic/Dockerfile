@@ -8,7 +8,7 @@ FROM python:3.6
 
 COPY . /app
 WORKDIR ./app
-#COPY kaggle.json /.kaggle
+ADD kaggle.json /.kaggle
 #ADD . /app
 
 RUN pip install -r requirements.txt
