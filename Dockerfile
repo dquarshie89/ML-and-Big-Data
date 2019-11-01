@@ -1,6 +1,6 @@
 
 FROM python:3.6
-RUN MKDIR -p .kaggle
+RUN mkdir -p .kaggle
 COPY /.kaggle/kaggle.json .kaggle
 #RUN mkdir -p ~/.kaggle
 #ADD . ~/.kaggle
