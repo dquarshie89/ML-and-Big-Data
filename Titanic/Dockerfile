@@ -1,8 +1,8 @@
 
 FROM python:3.6
 
-ADD kaggle.json /.kaggle/kaggle.json
-WORKDIR /
+ADD kaggle.json ./.kaggle/kaggle.json
+WORKDIR ./
 #COPY kaggle.json /.kaggle
 #ADD . /app
 
