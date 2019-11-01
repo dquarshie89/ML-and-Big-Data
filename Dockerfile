@@ -4,7 +4,7 @@ FROM python:3.6
 #RUN mkdir -p ~/.kaggle
 #ADD . ~/.kaggle
 
-COPY /.kaggle/kaggle.json ./.kaggle/kaggle.json
+COPY /.kaggle/kaggle.json .
 
 #COPY . /app
 WORKDIR ./app
