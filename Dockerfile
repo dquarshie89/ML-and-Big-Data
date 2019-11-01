@@ -4,10 +4,11 @@ FROM python:3.6
 #RUN mkdir -p ~/.kaggle
 #ADD . ~/.kaggle
 
-COPY /.kaggle .
+COPY . /app
+#COPY /.kaggle .
 
-#COPY . /app
-WORKDIR ./app
+
+WORKDIR /app
 
 #ADD . /app
 
