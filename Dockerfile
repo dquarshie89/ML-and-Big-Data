@@ -1,13 +1,13 @@
 
 FROM python:3.6
 
+COPY . /
 COPY kaggle.json ~/.kaggle
 #RUN mkdir -p ~/.kaggle
 #ADD . ~/.kaggle
 
-#COPY . /app
-#COPY /.kaggle .
-WORKDIR ./app
+
+WORKDIR ./
 
 #ADD . /app
 
