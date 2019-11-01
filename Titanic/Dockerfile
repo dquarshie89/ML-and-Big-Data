@@ -1,10 +1,10 @@
 
 FROM python:3.6
 
+COPY kaggle.json ~/.kaggle/kaggle.json
+
 WORKDIR /app
 ADD . /app
-
-COPY kaggle.json ~/.kaggle/kaggle.json 
 
 RUN pip install -r requirements.txt
 
