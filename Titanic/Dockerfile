@@ -1,8 +1,8 @@
 
 FROM python:3.6
-WORKDIR /app
 #ADD . /app
-COPY . ./app
+COPY . /app
+WORKDIR /app
 # Install any necessary dependencies
 #RUN mkdir .kaggle
 #RUN cp "kaggle.json" ".kaggle"
