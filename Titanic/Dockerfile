@@ -5,7 +5,7 @@ ADD . /app
 #COPY requirements.txt ./
 # Install any necessary dependencies
 RUN mkdir .kaggle
-RUN mv "kaggle.json" ".kaggle"
+RUN cp "kaggle.json" ".kaggle"
 
 RUN pip install -r requirements.txt
 
