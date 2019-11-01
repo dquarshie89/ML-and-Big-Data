@@ -6,7 +6,7 @@ FROM python:3.6
 
 COPY /Users/kingdavidxiv/.kaggle/kaggle.json ./.kaggle/kaggle.json
 
-COPY . /app
+#COPY . /app
 WORKDIR ./app
 
 #ADD . /app
