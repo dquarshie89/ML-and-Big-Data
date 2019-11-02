@@ -1,11 +1,10 @@
 
 FROM python:3.6
 
-WORKDIR $HOME
-#/usr/src/app
+WORKDIR /usr/src/app
 
-RUN mkdir /.kaggle
-COPY kaggle.json /.kaggle
+COPY kaggle.json .
+#/.kaggle
 COPY requirements.txt .
 COPY titanic_predictions.py .
 
