@@ -1,14 +1,15 @@
 
 FROM python:3.6
 
-WORKDIR root
+#WORKDIR root
 #COPY . /app
 #COPY kaggle.json  .
-RUN mkdir /.kaggle
+#RUN mkdir /.kaggle
+WORKDIR /app
+ADD . /app
 
-
-ADD kaggle.json /.kaggle/kaggle.json
-RUN chmod +x /.kaggle/kaggle.json
+#ADD kaggle.json /.kaggle/kaggle.json
+#RUN chmod +x /.kaggle/kaggle.json
 
 
 #RUN mkdir -p ~/.kaggle
