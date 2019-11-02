@@ -12,17 +12,17 @@ from sklearn.metrics import classification_report, confusion_matrix
 
 
 
-test_url = 'https://raw.githubusercontent.com/dquarshie89/ML-and-Big-Data/master/titanic_train.csv'
+test_url = 'https://raw.githubusercontent.com/dquarshie89/ML-and-Big-Data/master/titanic_test.csv'
 train_url='https://raw.githubusercontent.com/dquarshie89/ML-and-Big-Data/master/titanic_train.csv'
 
 #Save the train dataset as a dataframe and show the first 5 lines
-train = pd.read_csv(test_url)
+train = pd.read_csv(train_url)
 print('\nSample of train data\n')
 print(train.head(5))
 
 #Save the test dataset as a dataframe and show the first 5 lines
 print('\nSample of test data\n')
-test = pd.read_csv(train_url)
+test = pd.read_csv(test_url)
 print(test.head(5))
 
 #Random Forest Classification 
@@ -47,7 +47,8 @@ def RFC(X, y):
     return(model)
 
 #Read the train data
-df = pd.read_csv("train.csv")
+df = train
+#pd.read_csv("train.csv")
 #Drop unneeded variables
 df = df.drop(['Name', 'Cabin', 'Ticket'], axis=1)
 #Drop nulls
@@ -87,7 +88,8 @@ def get_test_df(df):
 
 
 #Input test data and drop unneeded columns
-test_df = pd.read_csv("test.csv")
+test_df = test
+# pd.read_csv("test.csv")
 X_test = pd.read_csv("X_test.csv")
 y_test = pd.read_csv("y_test.csv")
 X_test.drop(X_test.columns[[0]], axis=1, inplace=True)
