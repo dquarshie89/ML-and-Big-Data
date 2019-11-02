@@ -1,7 +1,7 @@
 
 FROM python:3.6
 
-WORKDIR /usr/src/app
+WORKDIR /.
 COPY .kaggle/kaggle.json ./.kaggle
 COPY requirements.txt .
 COPY titanic_predictions.py .
