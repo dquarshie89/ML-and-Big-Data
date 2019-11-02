@@ -3,8 +3,8 @@ FROM python:3.6
 
 WORKDIR /usr/src/app
 
-RUN mkdir .kaggle
-RUN cp kaggle.json ./.kaggle
+RUN mkdir -p /.kaggle
+COPY kaggle.json ./.kaggle
 COPY requirements.txt .
 COPY titanic_predictions.py .
 
