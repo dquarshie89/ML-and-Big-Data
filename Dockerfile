@@ -1,14 +1,15 @@
 
 FROM python:3.6
 
+WORKDIR /usr/src/app
 
-COPY kaggle.json ./.kaggle
+RUN mkdir .kaggle
+RUN cp kaggle.json ./.kaggle
 COPY requirements.txt .
 COPY titanic_predictions.py .
 
-WORKDIR /usr/src/app
-
 RUN pip install -r requirements.txt
+
 #pip install -r requirements.txt
 
 EXPOSE 500
