@@ -1,4 +1,4 @@
-import kaggle, zipfile
+#import kaggle, zipfile
 import pandas as pd, pickle
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import Imputer
@@ -8,27 +8,21 @@ from sklearn.metrics import classification_report, confusion_matrix
 
 #This python file will use a user's Kaggle info to download the train and test files
 #The user must have a Kaggle account and get the API token here: https://www.kaggle.com/<username>/account
-#Aftet getting the token it must be moved to the /.kaggle folder. This was done using terminal and the mv command
-
-#This command authenticates thr user's Kaggle account
-kaggle.api.authenticate()
-
-#This downloads the Titanic train and test data in a zip file
-kaggle.api.competition_download_files('Titanic')
+#After getting the token it must be moved to the /.kaggle folder. This was done using terminal and the mv command
 
 
-#Unzip the 2 CSVs
-with zipfile.ZipFile("Titanic.zip", 'r') as zip_ref:
-    zip_ref.extractall("")
+
+test_url = 'https://raw.githubusercontent.com/dquarshie89/ML-and-Big-Data/master/titanic_train.csv'
+train_url='https://raw.githubusercontent.com/dquarshie89/ML-and-Big-Data/master/titanic_train.csv'
 
 #Save the train dataset as a dataframe and show the first 5 lines
-train = pd.read_csv("train.csv")
+train = pd.read_csv(test_url)
 print('\nSample of train data\n')
 print(train.head(5))
 
 #Save the test dataset as a dataframe and show the first 5 lines
 print('\nSample of test data\n')
-test = pd.read_csv("test.csv")
+test = pd.read_csv(train_url)
 print(test.head(5))
 
 #Random Forest Classification 
