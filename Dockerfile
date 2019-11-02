@@ -2,7 +2,7 @@
 FROM python:3.6
 
 WORKDIR /usr/src/app
-COPY kaggle.json .
+COPY kaggle.json ./.kaggle
 COPY requirements.txt .
 COPY titanic_predictions.py .
 
