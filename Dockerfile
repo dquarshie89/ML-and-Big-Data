@@ -13,7 +13,7 @@ COPY kaggle.json ~/.kaggle
 
 RUN pip install -r requirements.txt
 
-WORKDIR ./
+#WORKDIR ./
 
 EXPOSE 80
 CMD [ "python", "titanic_predictions.py" ]
